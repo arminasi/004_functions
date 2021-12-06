@@ -1,12 +1,15 @@
-"use strict"
+ "use strict"
+ 
+ function pyramid(n) {
 
-function fib(n) {
-    if(n < 2)
-        return n;
-    return  fib(n - 1) + fib(n - 2);
+     let num = 1;
+     for(let i = 1; i <= n; i++) {
+         for(let j = 1; j <= i; j++) {
+             document.write((num * i + (j * 4)) - 4 + " ");
+         }
+         document.write("</br>");
+     }
 }
 
-console.log(fib(0));
-console.log(fib(2));
-console.log(fib(10));
-console.log(fib(20));
+pyramid(4);
+
